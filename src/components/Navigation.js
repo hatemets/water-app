@@ -1,17 +1,18 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import { BellFill } from 'react-bootstrap-icons';
-// import { LinkContainer } from 'react-router-bootstrap';
 
 const Navigation = () =>
 {
+	const myRef = useRef(null);
+
 	return (
 		<Navbar className="navbar" collapseOnSelect expand='sm' bg="dark" fixed="top" variant="dark">
 			<Container>
-				<Navbar.Toggle aria-controls='responsive-navbar-nav'></Navbar.Toggle>
+				<Navbar.Toggle ref={myRef} aria-controls='responsive-navbar-nav'></Navbar.Toggle>
 
 				{/* TODO: Add props */}
 				<div style={{ color: "white", fontSize: 20 }}>Dashboard</div>
@@ -19,9 +20,9 @@ const Navigation = () =>
 
 				<Navbar.Collapse id='responsive-navbar-nav'>
 					<Nav>
-						<Nav.Link><Link to="/">Dashboard</Link></Nav.Link>
-						<Nav.Link><Link to="/usage-times">Usage Times</Link></Nav.Link>
-						<Nav.Link><Link to="/activities">Activities</Link></Nav.Link>
+						<Nav.Link><Link onClick={() => {myRef.current.click()}} className="nav-item" to="/">Dashboard</Link></Nav.Link>
+						<Nav.Link><Link onClick={() => {myRef.current.click()}} className="nav-item" to="/usage-times">Usage Times</Link></Nav.Link>
+						<Nav.Link><Link onClick={() => {myRef.current.click()}} className="nav-item" to="/activities">Activities</Link></Nav.Link>
 					</Nav>
 				</ Navbar.Collapse>
 

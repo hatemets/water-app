@@ -33,3 +33,14 @@
 .margin-bottom-zero {
 	margin-bottom: 0px;
 }
+
+
+/* Navbar */
+.nav-item {
+	color: #ddd;
+}
+
+.nav-item:hover {
+	color: white;
+	text-decoration: none;
+}

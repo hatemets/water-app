@@ -12,10 +12,6 @@ import {
 
 import Container from 'react-bootstrap/Container';
 
-// import Card from 'react-bootstrap/Card';
-// import Col from 'react-bootstrap/Col';
-// import Row from 'react-bootstrap/Row';
-
 import Navigation from './components/Navigation.js';
 import Dashboard from './components/Dashboard.js';
 import Activities from './components/Activities.js';
@@ -27,19 +23,18 @@ const App = () => {
 
 			<Router>
 			<Navigation />
-				<div>
-					<Switch>
-						<Route exact path="/" component={Dashboard}>
-							<Dashboard />
-						</Route>
-						<Route path="/usage-times" component={UsageTimes}>
-							<UsageTimes />
-						</Route>
-						<Route path="/activities" component={Activities}>
-							<Activities />
-						</Route>
-					</Switch>
-				</div>
+
+				<Switch>
+					<Route exact path="/" component={Dashboard}>
+						<Dashboard />
+					</Route>
+					<Route path="/usage-times" component={UsageTimes}>
+						<UsageTimes />
+					</Route>
+					<Route path="/activities" component={Activities}>
+						<Activities />
+					</Route>
+				</Switch>
 			</Router>
 
 		</Container>
