@@ -3,7 +3,7 @@
 }
 
 .main-wrapper > *:not(.navbar) {
-	margin-top: 2vh;
+	margin-top: 50px;
 }
 
 .line-tight {
