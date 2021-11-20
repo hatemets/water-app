@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import firebase from "./firebase"
@@ -25,7 +25,13 @@ import Dashboard from './components/Dashboard.js';
 import Activities from './components/Activities.js';
 import UsageTimes from './components/UsageTimes.js';
 
+const success = "success"
+const warning = "warning"
+
 const App = () => {
+
+  const [streak, setStreak] = useState(0);
+  console.log(streak)
 
   useEffect(() => {
     console.log("listening to db")
@@ -34,8 +40,45 @@ const App = () => {
       .ref('test')
       .on('child_changed', (data) => {
           const values = data.val();
-          console.log(values)
-          NotificationManager.success('Success message', JSON.stringify(values, null, 2));
+          let type = ''
+          let message = ''
+          setStreak(streak+1)
+          if (values.time < 2) {
+            type = warning
+            message = 'You washed your hands only for ' + values.time + " seconds! Recommended amount is 20 seconds"
+          } else if (values.time < 30) {
+            type = success
+            message = 'Washing time was ' + values.time + " seconds! No water wasted"
+          }
+
+          let streakBroken = false;
+          let currentStreak = streak;
+          setStreak(1)
+          console.log(type)
+          if (type == success) {
+            setStreak(streak + 1)
+            console.log(currentStreak)
+          } else {
+            if (currentStreak > 0) {
+              streakBroken = true
+            }
+            setStreak(0)
+          }
+          console.log(currentStreak, streakBroken)
+
+          if (streakBroken) {
+            NotificationManager.error("Streak broken!", "Streak was " + currentStreak)
+          }
+          
+          if (values.type == "handwash") {
+            if (type == 'Warning') {
+              NotificationManager.warning('Did you wash properly?', message, 5000);
+            } else {
+              NotificationManager.success('Clean hands!', message, 5000);
+            }
+          } else if (values.type == "dishwash") {
+            NotificationManager.success('Clean plates!', message, 5000);
+          }
       });
   }, [])
 

@@ -32,7 +32,13 @@ class Example extends React.Component {
             .ref('test')
             .on('child_changed', (data) => {
                 const values = data.val();
-                NotificationManager.success('Success message', JSON.stringify(values, null, 2));
+                let type = ''
+                let message = ''
+                if (values.time < 15) {
+                    type = 'warning'
+                    message = 'You washed your hands only for ' + values.time + "! Recommended amount is 20 seconds"
+                }
+                NotificationManager.success('Success message', message);
             });
     }
 
