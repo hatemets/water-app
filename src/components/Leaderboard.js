@@ -5,7 +5,7 @@ import '../index.css';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import ListItem from './ListItem';
+import LeaderboardItem from './LeaderboardItem';
 
 const Leaderboard = () => (
 	<>
@@ -23,28 +23,28 @@ const Leaderboard = () => (
 
 				<Row style={{ marginBottom: 10 }}>
 					<Col style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-						<Card.Text style={{ fontWeight: "bold", fontSize: 14 }}>
+						<Card.Text style={{ fontWeight: "bold", fontSize: 15 }}>
 							Username
 						</Card.Text>
 					</Col>
 
 					<Col>
-						<Card.Text style={{ fontWeight: "bold", fontSize: 14, lineHeight: 1.15 }}>
+						<Card.Text style={{ fontWeight: "bold", fontSize: 15, lineHeight: 1.15 }}>
 							Daily Water Consumption
 						</Card.Text>
 					</Col>
 				</Row>
 
-				<ListItem name="Jake" place={1} waterAmount={93} />
-				<ListItem name="Jessica" place={2} waterAmount={102} />
-				<ListItem name="David" place={3} waterAmount={107} />
-				<ListItem name="James" place={4} waterAmount={112} />
-				<ListItem name="Maddie" place={5} waterAmount={131} />
-				<ListItem name="Rebecca" place={6} waterAmount={147} />
-				<ListItem name="Arnold" place={7} waterAmount={182} />
-				<ListItem name="John" place={8} waterAmount={238} />
-				<ListItem name="Jack" place={9} waterAmount={308} />
-				<ListItem name="Angelica" place={10} waterAmount={354} />
+				<LeaderboardItem name="Jake" place={1} waterAmount={93} />
+				<LeaderboardItem name="Jessica" place={2} waterAmount={102} />
+				<LeaderboardItem name="David" place={3} waterAmount={107} />
+				<LeaderboardItem name="James" place={4} waterAmount={112} />
+				<LeaderboardItem name="Maddie" place={5} waterAmount={131} />
+				<LeaderboardItem name="Rebecca" place={6} waterAmount={147} />
+				<LeaderboardItem name="Arnold" place={7} waterAmount={182} />
+				<LeaderboardItem name="John" place={8} waterAmount={238} />
+				<LeaderboardItem name="Jack" place={9} waterAmount={308} />
+				<LeaderboardItem name="Angelica" place={10} waterAmount={354} />
 
 			</Card.Body>
 		</Card>

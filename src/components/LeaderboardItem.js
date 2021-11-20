@@ -6,12 +6,12 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
-const ListItem = ({ name, place, waterAmount }) => {
+const LeaderboardItem = ({ name, place, waterAmount }) => {
 	return (
 		<Row>
 			<Col className="list-col"> 
 				<Card.Text className="list-item-wrapper">
-					<span className="list-item-text" style={{ color: 'black' }}>{ place }.</span> { name }
+					<span className="list-item-text">{ place }.</span> { name }
 				</Card.Text>
 			</Col>
 
@@ -24,4 +24,4 @@ const ListItem = ({ name, place, waterAmount }) => {
 	)
 };
 
-export default ListItem;
+export default LeaderboardItem;

@@ -5,92 +5,47 @@ import '../index.css';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import WaterConsumptionGraph from './WaterConsumptionGraph.js';
+import UsageItem from './UsageItem';
 
 const UsageTimes = () => (
 	<>
-		<Card className="top-card">
-			<Card.Body>
-				<Card.Title>USAGE TIMES</Card.Title>
-				<WaterConsumptionGraph />
+		<Card className="top-card" style={{ boxShadow: "none" }}>
+			<Card.Body className="line-tight">
+				<Card.Title style={{ fontWeight: "regular", textAlign: "center", marginBottom: 0 }}>Most water used at</Card.Title>
+				<Card.Text style={{ color: "red", fontWeight: "bold", textAlign: "center", paddingTop: 0 }}><span style={{ fontSize: 52, color: "black" }}>6</span>PM</Card.Text>
 			</Card.Body>
 		</Card>
 
-		<Card>
+		<Card className="list" style={{ lineHeight: 2.2 }}>
 			<Card.Body>
-				<Card.Title style={{ fontWeight: "bold", marginBottom: 3 }}>Recent Activity</Card.Title>
-				<Card.Text>
-					We hope you had a nice shower!
-				</Card.Text>
+				<Card.Title style={{ fontWeight: "bold", marginBottom: -5 }}>Highest Water Usage Time Periods</Card.Title>
+				<hr />
 
-				<Row className="line-tight">
-					<Col>
-						<Card.Text style={{ marginBottom: 0 }}>
-							Time spent
-						</Card.Text>
-
-						<Card.Text className="red-text">
-							<span className="showcase-text">15</span>min
+				<Row style={{ marginBottom: 10 }}>
+					<Col style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+						<Card.Text style={{ fontWeight: "bold", fontSize: 14 }}>
+							Username
 						</Card.Text>
 					</Col>
 
 					<Col>
-						<Card.Text style={{ marginBottom: 0 }}>
-							Regional average
-						</Card.Text>
-
-						<Card.Text className="red-text">
-							<span className="showcase-text">25</span>min
+						<Card.Text style={{ fontWeight: "bold", fontSize: 14, lineHeight: 1.15 }}>
+							Daily Water Consumption
 						</Card.Text>
 					</Col>
 				</Row>
 
-				<Row className="line-tight" style={{ marginTop: 10 }}>
-					<Col>
-						<Card.Text className="margin-bottom-zero" style={{ fontSize: 15 }}>
-							Water Consumption
-						</Card.Text>
+				<UsageItem day="Monday" start="8AM" end="9AM" />
+				<UsageItem day="Tuesday" start="8AM" end="9AM" />
+				<UsageItem day="Wednesday" start="8AM" end="9AM" />
+				<UsageItem day="Thursday" start="7AM" end="8AM" />
+				<UsageItem day="Friday" start="6PM" end="7PM" />
+				<UsageItem day="Saturday" start="9PM" end="10PM" />
+				<UsageItem day="Sunday" start="10PM" end="11PM" />
 
-						<Card.Text className="red-text">
-							<span className="showcase-text">65</span>L
-						</Card.Text>
-					</Col>
-
-					<Col >
-						<Card.Text className="margin-bottom-zero">
-							Regional average
-						</Card.Text>
-
-						<Card.Text className="red-text">
-							<span className="showcase-text">85</span>L
-						</Card.Text>
-					</Col>
-				</Row>
 			</Card.Body>
 		</Card>
 
-		<Row>
-			<Col style={{ paddingRight: 7}}>
-				<Card>
-					<Card.Body style={{ paddingBottom: 0 }}>
-						<Card.Title className="margin-bottom-zero" style={{ fontWeight: "bold", fontSize: 20 }}>Leaderboard Position</Card.Title>
-						<Card.Text className="center-text red-text">
-							<span className="showcase-text-large">12</span>th
-						</Card.Text>
-					</Card.Body>
-				</Card>
-			</Col>
-			<Col style={{ paddingLeft: 7}}>
-				<Card style={{ height: "100%" }}>
-					<Card.Body style={{ paddingBottom: 0 }}>
-						<Card.Title style={{ fontWeight: "bold", fontSize: 20 }}>Most water used at</Card.Title>
-						<Card.Text className="center-text red-text">
-							<span className="showcase-text-large">6</span>PM
-						</Card.Text>
-					</Card.Body>
-				</Card>
-			</Col>
-		</Row>
 	</>
 );
 
