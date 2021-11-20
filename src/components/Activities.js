@@ -5,9 +5,12 @@ import '../index.css';
 import Card from 'react-bootstrap/Card';
 import FaucetData from './FaucetData';
 import DefaultActivity from './DefaultActivity';
+import Title from './Title';
 
 const Activities = () => (
 	<>
+		<Title name="Activities" />
+
 		<DefaultActivity isTop={true} activity="Shower" time="5.13 PM" timeSpent={15} timeAvg={25} waterAmount={65} waterAvg={85} />
 		<DefaultActivity activity="Dishwasher" time="4.43 PM" timeSpent={120} timeAvg={90} waterAmount={25} waterAvg={15} />
 		<DefaultActivity activity="Washing machine" time="4.01 PM" timeSpent={120} timeAvg={90} waterAmount={35} waterAvg={50} />

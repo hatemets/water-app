@@ -6,9 +6,12 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import UsageItem from './UsageItem';
+import Title from './Title';
 
 const UsageTimes = () => (
 	<>
+		<Title name="Usage Times" />
+
 		<Card className="top-card" style={{ boxShadow: "none" }}>
 			<Card.Body className="line-tight">
 				<Card.Title style={{ fontWeight: "regular", textAlign: "center", marginBottom: 0 }}>Most water used at</Card.Title>

@@ -6,9 +6,13 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import LeaderboardItem from './LeaderboardItem';
+import Title from './Title';
 
 const Leaderboard = () => (
 	<>
+		<Title name="Leaderboard" />
+
+		<div id="current-page">Leaderboard</div>
 		<Card className="top-card" style={{ boxShadow: "none" }}>
 			<Card.Body className="line-tight">
 				<Card.Title style={{ color: "crimson", fontWeight: "bold", textAlign: "center", marginBottom: 0 }}>POSITION</Card.Title>

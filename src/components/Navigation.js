@@ -14,9 +14,7 @@ const Navigation = () =>
 			<Container>
 				<Navbar.Toggle ref={myRef} aria-controls='responsive-navbar-nav'></Navbar.Toggle>
 
-				{/* TODO: Add props */}
-				<div style={{ color: "#ddd", fontSize: 20, marginRight: 20 }}>Dashboard</div>
-				<BellFill style={{ color: "#ddd", transform: "rotate(30deg) scale(1.5)", marginRight: 5 }} />
+				<BellFill style={{ color: "#ddd", transform: "scale(1.5)", marginRight: 5 }} />
 
 				<Navbar.Collapse id='responsive-navbar-nav'>
 					<Nav>

@@ -5,6 +5,7 @@ import '../index.css';
 import Graph from './Graph';
 import { ChevronLeft } from 'react-bootstrap-icons';
 import { Link } from 'react-router-dom';
+import Title from './Title';
 
 import data from '../data/WaterConsumption';
 import { Card } from 'react-bootstrap';
@@ -12,6 +13,8 @@ import { Card } from 'react-bootstrap';
 const Toilet = () => {
 	return (
 		<>
+			<Title name="Toilet" />
+
 			<div id="back-wrapper">
 				<Link to='/faucets'><ChevronLeft id="back-button" variant="primary"/></Link>
 			</div>

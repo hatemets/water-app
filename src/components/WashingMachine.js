@@ -5,12 +5,15 @@ import '../index.css';
 import Graph from './Graph';
 import { ChevronLeft } from 'react-bootstrap-icons';
 import { Link } from 'react-router-dom';
+import Title from './Title';
 
 import data from '../data/WaterConsumption';
 
 const WashingMachine = () => {
 	return (
 		<>
+			<Title name="Washing Machine" />
+
 			<div id="back-wrapper">
 				<Link to='/faucets'><ChevronLeft id="back-button" variant="primary"/></Link>
 			</div>

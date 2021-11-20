@@ -5,11 +5,14 @@ import '../index.css';
 import { Card, Col, Row } from 'react-bootstrap';
 import Graph from './Graph.js';
 import FaucetData from './FaucetData';
+import Title from './Title';
 
 import data from '../data/WaterConsumption';
 
 const Dashboard = () => (
 	<>
+		<Title name="Dashboard" />
+
 		<Graph isTop={true} title="Average water consumption" xLabel="day" yLabel="Water consumed" yUnit="L" data={data} />
 
 		<Card>
