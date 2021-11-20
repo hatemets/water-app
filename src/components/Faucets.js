@@ -2,9 +2,8 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
 
-import { Route, Link, Switch } from "react-router-dom";
+import {  Link } from "react-router-dom";
 import { Card, Col, Row, ListGroup } from 'react-bootstrap';
-import Toilet from './Toilet.js';
 
 const Faucets = ({ match }) => (
 	<Card className="top-card">

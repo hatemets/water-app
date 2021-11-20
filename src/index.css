@@ -57,6 +57,21 @@
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+#back-button {
+	color: #ddd;
+	transform: scale(2);
+}
+
+#back-wrapper {
+	position: absolute;
+	z-index: 9999;
+	margin-left: 6px;
+	margin-top: -8px;
+	width: 60px;
+	height: 40px;
+	background-color: #343a40;
+}
+
 
 /* List */
 .list > * {
