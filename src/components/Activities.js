@@ -2,10 +2,8 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
 
-import Card from 'react-bootstrap/Card';
-import FaucetData from './FaucetData';
-import DefaultActivity from './DefaultActivity';
-import Title from './Title';
+import DefaultActivity from '../help/DefaultActivity';
+import Title from '../help/Title';
 
 const Activities = () => (
 	<>

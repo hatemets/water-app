@@ -3,9 +3,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
 
 import { Card, Col, Row } from 'react-bootstrap';
-import Graph from './Graph.js';
-import FaucetData from './FaucetData';
-import Title from './Title';
+import FaucetData from '../help/FaucetData';
+import Title from '../help/Title';
+import Graph from '../help/Graph.js';
 
 import data from '../data/WaterConsumption';
 

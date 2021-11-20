@@ -4,6 +4,10 @@ import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import { BellFill } from 'react-bootstrap-icons';
+import { ToastContainer, toast } from '../../node_modules/react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+// import Notification from 'Notification';
 
 const Navigation = () =>
 {
@@ -13,8 +17,9 @@ const Navigation = () =>
 		<Navbar className="navbar" collapseOnSelect expand='sm' fixed="top" variant="dark">
 			<Container>
 				<Navbar.Toggle ref={myRef} aria-controls='responsive-navbar-nav'></Navbar.Toggle>
+				<ToastContainer />
 
-				<BellFill style={{ color: "#ddd", transform: "scale(1.5)", marginRight: 5 }} />
+				<BellFill onClick={() => toast.success("You just washed your hands for 21 seconds. Good job!") } style={{ cursor: "pointer", color: "#ddd", transform: "scale(1.5)", marginRight: 5 }} />
 
 				<Navbar.Collapse id='responsive-navbar-nav'>
 					<Nav>

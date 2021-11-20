@@ -5,8 +5,8 @@ import '../index.css';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import LeaderboardItem from './LeaderboardItem';
-import Title from './Title';
+import LeaderboardItem from '../help/LeaderboardItem';
+import Title from '../help/Title';
 
 const Leaderboard = () => (
 	<>

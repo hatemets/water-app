@@ -2,9 +2,9 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
 
-import {  Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Card, Col, Row, ListGroup } from 'react-bootstrap';
-import Title from './Title';
+import Title from '../help/Title';
 
 const Faucets = ({ match }) => (
 	<>

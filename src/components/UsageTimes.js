@@ -2,11 +2,9 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
 
-import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
-import UsageItem from './UsageItem';
-import Title from './Title';
+import { Card, Col, Row } from 'react-bootstrap';
+import UsageItem from '../help/UsageItem';
+import Title from '../help/Title';
 
 const UsageTimes = () => (
 	<>

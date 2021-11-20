@@ -2,13 +2,12 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
 
-import Graph from './Graph';
 import { ChevronLeft } from 'react-bootstrap-icons';
 import { Link } from 'react-router-dom';
-import Title from './Title';
+import Title from '../help/Title';
+import Graph from '../help/Graph';
 
 import data from '../data/WaterConsumption';
-import { Card } from 'react-bootstrap';
 
 const Toilet = () => {
 	return (
