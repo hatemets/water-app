@@ -1,6 +1,10 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
+import firebase from "./firebase"
+import "firebase/database";
+import { NotificationContainer, NotificationManager } from 'react-notifications';
+import 'react-notifications/lib/notifications.css';
 
 // import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import {
@@ -22,6 +26,19 @@ import Activities from './components/Activities.js';
 import UsageTimes from './components/UsageTimes.js';
 
 const App = () => {
+
+  useEffect(() => {
+    console.log("listening to db")
+    firebase
+      .database("https://junction2021-cf61c-default-rtdb.europe-west1.firebasedatabase.app/")
+      .ref('test')
+      .on('child_changed', (data) => {
+          const values = data.val();
+          console.log(values)
+          NotificationManager.success('Success message', JSON.stringify(values, null, 2));
+      });
+  }, [])
+
 	return (
 		<Container className="p-3 main-wrapper">
 
@@ -41,6 +58,7 @@ const App = () => {
 					</Switch>
 				</div>
 			</Router>
+      <NotificationContainer />
 
 		</Container>
 	)
