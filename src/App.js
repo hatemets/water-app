@@ -27,10 +27,21 @@ import UsageTimes from './components/UsageTimes.js';
 
 const success = "success"
 const warning = "warning"
+const error = "error"
+
+let streak = 0
+
+const incrementStreak = () => {
+  streak =+ streak + 1
+  console.log(streak)
+}
+const resetStreak = () => {
+  streak = 0
+  console.log(streak)
+}
 
 const App = () => {
 
-  const [streak, setStreak] = useState(0);
   console.log(streak)
 
   useEffect(() => {
@@ -42,52 +53,45 @@ const App = () => {
           const values = data.val();
           let type = ''
           let message = ''
-          setStreak(streak+1)
-          if (values.time < 2) {
+          if (values.time < 15) {
             type = warning
-            message = 'You washed your hands only for ' + values.time + " seconds! Recommended amount is 20 seconds"
-          } else if (values.time < 30) {
+            message = 'You washed your hands only for ' + values.time + " seconds! Recommended duration is 20 seconds"
+          } else if (values.time < 25) {
             type = success
             message = 'Washing time was ' + values.time + " seconds! No water wasted"
+          } else {
+            type = warning
+            message = 'That took too long, ' + values.time + " seconds! Less water is needed."
           }
 
           let streakBroken = false;
           let currentStreak = streak;
-          setStreak(1)
-          console.log(type)
           if (type == success) {
-            setStreak(streak + 1)
-            console.log(currentStreak)
+            incrementStreak();
           } else {
-            if (currentStreak > 0) {
+            if (streak > 0) {
               streakBroken = true
             }
-            setStreak(0)
+            resetStreak();
           }
-          console.log(currentStreak, streakBroken)
 
           if (streakBroken) {
-            NotificationManager.error("Streak broken!", "Streak was " + currentStreak)
+            NotificationManager.error("Streak was " + currentStreak, "Streak broken!")
           }
           
-          if (values.type == "handwash") {
-            if (type == 'Warning') {
-              NotificationManager.warning('Did you wash properly?', message, 5000);
-            } else {
-              NotificationManager.success('Clean hands!', message, 5000);
-            }
-          } else if (values.type == "dishwash") {
-            NotificationManager.success('Clean plates!', message, 5000);
+          if (type == warning) {
+            NotificationManager.warning(message, 'Did you wash properly?', 5000);
+          } else {
+            NotificationManager.success(message, 'Clean hands! Streak: ' + streak, 5000);
           }
       });
   }, [])
 
 	return (
 		<Container className="p-3 main-wrapper">
-
 			<Router>
 			<Navigation />
-				<div>
+				<div className='mt-6'>
 					<Switch>
 						<Route exact path="/" component={Dashboard}>
 							<Dashboard />
