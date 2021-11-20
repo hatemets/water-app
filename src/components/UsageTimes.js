@@ -23,14 +23,14 @@ const UsageTimes = () => (
 
 				<Row style={{ marginBottom: 10 }}>
 					<Col style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-						<Card.Text style={{ fontWeight: "bold", fontSize: 14 }}>
-							Username
+						<Card.Text style={{ fontWeight: "bold", fontSize: 15 }}>
+							Weekday
 						</Card.Text>
 					</Col>
 
 					<Col>
-						<Card.Text style={{ fontWeight: "bold", fontSize: 14, lineHeight: 1.15 }}>
-							Daily Water Consumption
+						<Card.Text style={{ fontWeight: "bold", fontSize: 15 }}>
+							Time period
 						</Card.Text>
 					</Col>
 				</Row>

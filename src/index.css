@@ -76,3 +76,12 @@
 .list-item-text {
 	font-size: 1.15em;
 }
+
+.list-group > * {
+	color: black !important;
+}
+
+.list-group > *:hover {
+	color: black !important;
+	text-decoration: none;
+}

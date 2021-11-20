@@ -1,7 +1,8 @@
 import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
-const data = [ { name: "Mon", "Water consumed": 325 },
+const data = [
+	{ name: "Mon", "Water consumed": 325 },
 	{ name: "Tue", "Water consumed": 438, },
 	{ name: "Wed", "Water consumed": 238, },
 	{ name: "Thu", "Water consumed": 502, },
