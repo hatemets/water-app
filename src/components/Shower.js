@@ -7,9 +7,8 @@ import { ChevronLeft } from 'react-bootstrap-icons';
 import { Link } from 'react-router-dom';
 
 import data from '../data/WaterConsumption';
-import { Card } from 'react-bootstrap';
 
-const Toilet = () => {
+const Shower = () => {
 	return (
 		<>
 			<div id="back-wrapper">
@@ -23,4 +22,4 @@ const Toilet = () => {
 	)
 };
 
-export default Toilet;
+export default Shower;

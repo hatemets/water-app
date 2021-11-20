@@ -2,20 +2,15 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
 
-import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
-import WaterConsumptionGraph from './WaterConsumptionGraph.js';
+import { Card, Col, Row } from 'react-bootstrap';
+import Graph from './Graph.js';
 import FaucetData from './FaucetData';
+
+import data from '../data/WaterConsumption';
 
 const Dashboard = () => (
 	<>
-		<Card className="top-card">
-			<Card.Body>
-				<Card.Title>Average water consumption</Card.Title>
-				<WaterConsumptionGraph />
-			</Card.Body>
-		</Card>
+		<Graph isTop={true} title="Average water consumption" xLabel="day" yLabel="Water consumed" yUnit="L" data={data} />
 
 		<Card>
 			<Card.Body>

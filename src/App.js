@@ -16,7 +16,11 @@ import Leaderboard from './components/Leaderboard.js';
 import UsageTimes from './components/UsageTimes.js';
 import Activities from './components/Activities.js';
 import Faucets from './components/Faucets.js';
+
+// Individual Faucets (depending on the individual household)
 import Toilet from './components/Toilet.js';
+import WashingMachine from './components/WashingMachine.js';
+import Shower from './components/Shower.js';
 
 const App = () => {
 	return (
@@ -34,6 +38,8 @@ const App = () => {
 
 					{/* Faucet subpaths */}	
 					<Route path="/faucets/toilet" component={Toilet} />
+					<Route path="/faucets/shower" component={Shower} />
+					<Route path="/faucets/washing-machine" component={WashingMachine} />
 				</Switch>
 			</Router>
 

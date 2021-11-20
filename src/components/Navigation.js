@@ -10,7 +10,7 @@ const Navigation = () =>
 	const myRef = useRef(null);
 
 	return (
-		<Navbar className="navbar" collapseOnSelect expand='sm' bg="dark" fixed="top" variant="dark">
+		<Navbar className="navbar" collapseOnSelect expand='sm' fixed="top" variant="dark">
 			<Container>
 				<Navbar.Toggle ref={myRef} aria-controls='responsive-navbar-nav'></Navbar.Toggle>
 
