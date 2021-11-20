@@ -15,6 +15,7 @@ import Navigation from './components/Navigation.js';
 import Dashboard from './components/Dashboard.js';
 import Leaderboard from './components/Leaderboard.js';
 import UsageTimes from './components/UsageTimes.js';
+import Activities from './components/Activities.js';
 
 const App = () => {
 	return (
@@ -32,6 +33,9 @@ const App = () => {
 					</Route>
 					<Route path="/leaderboard" component={Leaderboard}>
 						<Leaderboard />
+					</Route>
+					<Route path="/activities" component={Activities}>
+						<Activities />
 					</Route>
 				</Switch>
 			</Router>

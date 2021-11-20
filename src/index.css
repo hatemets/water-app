@@ -23,7 +23,7 @@
 }
 
 .red-text {
-	color: red;
+	color: crimson;
 }
 
 .center-text {
@@ -53,6 +53,7 @@
 /* Card body */
 .card {
 	border: none !important;
+	border-radius: 10px !important;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 

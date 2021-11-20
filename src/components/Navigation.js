@@ -23,6 +23,7 @@ const Navigation = () =>
 						<Nav.Link><Link onClick={() => {myRef.current.click()}} className="nav-item" to="/">Dashboard</Link></Nav.Link>
 						<Nav.Link><Link onClick={() => {myRef.current.click()}} className="nav-item" to="/usage-times">Usage Times</Link></Nav.Link>
 						<Nav.Link><Link onClick={() => {myRef.current.click()}} className="nav-item" to="/leaderboard">Leaderboard</Link></Nav.Link>
+						<Nav.Link><Link onClick={() => {myRef.current.click()}} className="nav-item" to="/activities">Recent Activities</Link></Nav.Link>
 					</Nav>
 				</ Navbar.Collapse>
 
