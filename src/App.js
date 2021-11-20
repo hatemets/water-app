@@ -17,10 +17,11 @@ import UsageTimes from './components/UsageTimes.js';
 import Activities from './components/Activities.js';
 import Faucets from './components/Faucets.js';
 
-// Individual Faucets (depending on the individual household)
+// Individual Faucets (depending on an individual household)
 import Toilet from './components/Toilet.js';
 import WashingMachine from './components/WashingMachine.js';
 import Shower from './components/Shower.js';
+import Notifications from './components/Notifications';
 
 const App = () => {
 	return (
@@ -34,6 +35,7 @@ const App = () => {
 					<Route path="/usage-times" component={UsageTimes} />
 					<Route path="/leaderboard" component={Leaderboard} />
 					<Route path="/activities" component={Activities} />
+					<Route path="/notifications" component={Notifications} />
 					<Route exact path="/faucets" component={Faucets} />
 
 					{/* Faucet subpaths */}	

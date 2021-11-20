@@ -13,7 +13,7 @@ const UsageTimes = () => (
 		<Card className="top-card" style={{ boxShadow: "none" }}>
 			<Card.Body className="line-tight">
 				<Card.Title style={{ fontWeight: "regular", textAlign: "center", marginBottom: 0 }}>Most water used at</Card.Title>
-				<Card.Text style={{ color: "crimson", fontWeight: "bold", textAlign: "center", paddingTop: 0 }}><span style={{ fontSize: 52, color: "black" }}>6</span>PM</Card.Text>
+				<Card.Text style={{ color: "navy", fontWeight: "bold", textAlign: "center", paddingTop: 0 }}><span style={{ fontSize: 52, color: "black" }}>6</span>PM</Card.Text>
 			</Card.Body>
 		</Card>
 

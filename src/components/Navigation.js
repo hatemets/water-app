@@ -17,9 +17,8 @@ const Navigation = () =>
 		<Navbar className="navbar" collapseOnSelect expand='sm' fixed="top" variant="dark">
 			<Container>
 				<Navbar.Toggle ref={myRef} aria-controls='responsive-navbar-nav'></Navbar.Toggle>
-				<ToastContainer />
 
-				<BellFill onClick={() => toast.success("You just washed your hands for 21 seconds. Good job!") } style={{ cursor: "pointer", color: "#ddd", transform: "scale(1.5)", marginRight: 5 }} />
+				<Link to='/notifications'><BellFill style={{ cursor: "pointer", color: "#ddd", transform: "scale(1.5)", marginRight: 5 }} /></Link>
 
 				<Navbar.Collapse id='responsive-navbar-nav'>
 					<Nav>
