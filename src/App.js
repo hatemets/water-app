@@ -6,15 +6,14 @@ import './index.css';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 import Container from 'react-bootstrap/Container';
 
 import Navigation from './components/Navigation.js';
 import Dashboard from './components/Dashboard.js';
-import Activities from './components/Activities.js';
+import Leaderboard from './components/Leaderboard.js';
 import UsageTimes from './components/UsageTimes.js';
 
 const App = () => {
@@ -31,8 +30,8 @@ const App = () => {
 					<Route path="/usage-times" component={UsageTimes}>
 						<UsageTimes />
 					</Route>
-					<Route path="/activities" component={Activities}>
-						<Activities />
+					<Route path="/leaderboard" component={Leaderboard}>
+						<Leaderboard />
 					</Route>
 				</Switch>
 			</Router>

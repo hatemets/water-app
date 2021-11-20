@@ -15,14 +15,14 @@ const Navigation = () =>
 				<Navbar.Toggle ref={myRef} aria-controls='responsive-navbar-nav'></Navbar.Toggle>
 
 				{/* TODO: Add props */}
-				<div style={{ color: "white", fontSize: 20 }}>Dashboard</div>
-				<BellFill style={{ color: "white", transform: "rotate(30deg) scale(1.5)", marginRight: 5 }} />
+				<div style={{ color: "#ddd", fontSize: 20, marginRight: 20 }}>Dashboard</div>
+				<BellFill style={{ color: "#ddd", transform: "rotate(30deg) scale(1.5)", marginRight: 5 }} />
 
 				<Navbar.Collapse id='responsive-navbar-nav'>
 					<Nav>
 						<Nav.Link><Link onClick={() => {myRef.current.click()}} className="nav-item" to="/">Dashboard</Link></Nav.Link>
 						<Nav.Link><Link onClick={() => {myRef.current.click()}} className="nav-item" to="/usage-times">Usage Times</Link></Nav.Link>
-						<Nav.Link><Link onClick={() => {myRef.current.click()}} className="nav-item" to="/activities">Activities</Link></Nav.Link>
+						<Nav.Link><Link onClick={() => {myRef.current.click()}} className="nav-item" to="/leaderboard">Leaderboard</Link></Nav.Link>
 					</Nav>
 				</ Navbar.Collapse>
 
