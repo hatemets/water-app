@@ -21,7 +21,7 @@ const Notification = ({ isTop=false, timeStamp, faucet, time, power, temp, amoun
 				</Col>
 				<Col>
 					<Card.Text style={{ fontWeight: "bold" }}>Avg. Temp</Card.Text>
-					<Card.Text><span style={{ fontWeight: "bold", fontSize: "1.4em" }}>{ temp }</span>C</Card.Text>
+					<Card.Text><span style={{ fontWeight: "bold", fontSize: "1.4em" }}>{ temp }</span>°C</Card.Text>
 				</Col>
 				<Col>
 					<Card.Text style={{ fontWeight: "bold" }}>Amount used</Card.Text>
