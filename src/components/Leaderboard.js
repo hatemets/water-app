@@ -9,7 +9,7 @@ import ListItem from './ListItem';
 
 const Leaderboard = () => (
 	<>
-		<Card className="top-card" style={{ border: 0 }}>
+		<Card className="top-card" style={{ boxShadow: "none" }}>
 			<Card.Body className="line-tight">
 				<Card.Title style={{ color: "red", fontWeight: "bold", textAlign: "center", marginBottom: 0 }}>POSITION</Card.Title>
 				<Card.Text style={{ color: "red", fontWeight: "bold", textAlign: "center", paddingTop: 0 }}><span style={{ fontSize: 52, color: "black" }}>7</span>th</Card.Text>
