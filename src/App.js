@@ -10,18 +10,19 @@ import {
 
 import Container from 'react-bootstrap/Container';
 
-import Navigation from './components/Navigation.js';
-import Dashboard from './components/Dashboard.js';
-import Leaderboard from './components/Leaderboard.js';
-import UsageTimes from './components/UsageTimes.js';
 import Activities from './components/Activities.js';
+import Dashboard from './components/Dashboard.js';
 import Faucets from './components/Faucets.js';
+import Leaderboard from './components/Leaderboard.js';
+import Navigation from './components/Navigation.js';
+import Notifications from './components/Notifications';
+import UsageTimes from './components/UsageTimes.js';
 
 // Individual Faucets (depending on an individual household)
 import Toilet from './components/Toilet.js';
 import WashingMachine from './components/WashingMachine.js';
 import Shower from './components/Shower.js';
-import Notifications from './components/Notifications';
+
 
 const App = () => {
 	return (

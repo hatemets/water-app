@@ -4,10 +4,17 @@ import '../index.css';
 
 import Title from '../help/Title';
 import Notification from '../help/Notification';
+import { ChevronLeft } from 'react-bootstrap-icons';
+import { Link } from 'react-router-dom';
 
 const Notifications = () => (
 	<>
 		<Title name="Notifications" />
+
+		<div id="back-wrapper">
+			<Link to='/'><ChevronLeft id="back-button" variant="primary"/></Link>
+		</div>
+
 
 		<Notification timeStamp="5.34 PM" isTop={true} faucet="Shower" time={13} power={53.4} temp={28.3} amount={5.3} />
 		<Notification timeStamp="4.59 PM" faucet="Washing Machine" time={125} power={138.4} temp={52.0} amount={32} />

@@ -4,10 +4,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import { BellFill } from 'react-bootstrap-icons';
-import { ToastContainer, toast } from '../../node_modules/react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
-// import Notification from 'Notification';
 
 const Navigation = () =>
 {

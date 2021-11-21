@@ -9,6 +9,7 @@ import Graph from '../help/Graph.js';
 
 import data from '../data/WaterConsumption';
 
+
 const Dashboard = () => (
 	<>
 		<Title name="Dashboard" />

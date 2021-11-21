@@ -19,7 +19,7 @@ const Graph = ({ isTop=false, title, xLabel, yLabel, yUnit, data }) => {
 						<XAxis dataKey={ xLabel } tick={{ fontSize: 12 }}/>
 						<YAxis tick={{ fontSize: 12 }} unit={ yUnit }/>
 						<Tooltip contentStyle={{ backgroundColor: "#8884d8", color: "#fff" }} itemStyle={{ color: "#fff" }} cursor={false}/>
-						<Line type="monotone" dataKey={ yLabel } stroke="navy" strokeWidth="2" />
+						<Line type="monotone" dataKey={ yLabel } stroke="navy" strokeWidth="2" dot={false} />
 
 					</LineChart>
 				</ResponsiveContainer>
