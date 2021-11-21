@@ -53,11 +53,6 @@
 	border: 0;
 }
 
-/* .Toastify > * > * { */
-/* 	z-index: 99999; */
-/* 	background-color: blue !important; */	 
-/* } */
-
 #title-wrapper {
 	position: fixed;
 	display: flex;
@@ -86,7 +81,11 @@
 
 #back-button {
 	color: #ddd;
+	z-index: 9999;
+	background-color: #0B0B45;
 	transform: scale(2);
+	margin-top: 8px;
+	position: fixed;
 }
 
 #back-wrapper {

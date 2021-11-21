@@ -19,7 +19,7 @@ import Notifications from './components/Notifications';
 import UsageTimes from './components/UsageTimes.js';
 
 // Individual Faucets (depending on an individual household)
-import Toilet from './components/Toilet.js';
+import DishWasher from './components/DishWasher.js';
 import WashingMachine from './components/WashingMachine.js';
 import Shower from './components/Shower.js';
 
@@ -40,7 +40,7 @@ const App = () => {
 					<Route exact path="/faucets" component={Faucets} />
 
 					{/* Faucet subpaths */}	
-					<Route path="/faucets/toilet" component={Toilet} />
+					<Route path="/faucets/dishwasher" component={DishWasher} />
 					<Route path="/faucets/shower" component={Shower} />
 					<Route path="/faucets/washing-machine" component={WashingMachine} />
 				</Switch>

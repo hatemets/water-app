@@ -18,7 +18,7 @@ const Faucets = ({ match }) => (
 					<Col>
 						<Card.Text>
 							<ListGroup>
-								<Link to={`${match.url}/toilet`}><ListGroup.Item action>Toilet</ListGroup.Item></Link>
+								<Link to={`${match.url}/dishwasher`}><ListGroup.Item action>Dishwasher</ListGroup.Item></Link>
 								<Link to={`${match.url}/shower`}><ListGroup.Item action>Shower</ListGroup.Item></Link>
 								<Link to={`${match.url}/washing-machine`}><ListGroup.Item action>Washing machine</ListGroup.Item></Link>
 							</ListGroup>
